@@ -17,8 +17,8 @@ id_chat = 1928309017
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
+    user_id = message.chat.id
     try:
-        user_id = message.chat.id
         SAVE_PATH = '/'.join(os.getcwd().split('/')[:3]) + '/Downloads'
         options = {
             'format': 'bestaudio/best',
